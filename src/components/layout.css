@@ -9,12 +9,15 @@
 }
 .hero-img {
   z-index: 11;
-  position: absolute;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px; /* Half the height */
+  margin-left: -150px;
 }
 
-.hero-title {
-  justify-content: center;
-}
 .hero h1 {
   color: #fff;
   letter-spacing: 1.15rem;
@@ -26,6 +29,8 @@
   align-items: center;
   display: flex;
 }
+.subtitle {
+}
 .hero h2 {
   letter-spacing: 4px;
   font-size: 20px;
@@ -34,13 +39,33 @@
   color: #fff;
   position: absolute;
   z-index: 111;
-  opacity: 0.75;
+  opacity: 0.65;
+  bottom: 35%;
+  text-shadow: 5px 5px 10px #000;
 }
 .hero h1 span {
   color: #000000;
   z-index: 111;
   text-shadow: #000000 5px 5px 25px;
   position: relative;
+}
+
+@media only screen and (max-width: 400px) {
+  .hero h1 {
+    font-size: 7rem;
+    letter-spacing: 1rem;
+  }
+
+  .hero-img {
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: -125px; /* Half the height */
+    margin-left: -125px;
+  }
 }
 
 .btn {
@@ -50,12 +75,12 @@
   position: absolute;
   z-index: 11;
   padding: 10px 20px;
-  bottom: 15%;
+  bottom: 25%;
   font-size: 16px;
 }
-
 .btn:hover {
   background-color: rgba(253, 253, 253, 0.95);
+  box-shadow: 5px 5px 25px #0000004d;
 }
 
 footer {
